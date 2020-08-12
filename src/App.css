@@ -36,3 +36,53 @@
     transform: rotate(360deg);
   }
 }
+
+img {
+  max-width: 5em;
+  padding: 0.5em;
+  padding-left: 3em;
+}
+
+h1 {
+  text-align: center;
+}
+
+button {
+  padding: 1em;
+  margin: 1em;
+  background-color: transparent;
+  color: white;
+  font-size: 1em;
+  font-family: arial;
+  border-radius: 10%;
+  border: 2px solid white;
+}
+
+table {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  border: 2px solid white;
+}
+
+.contacts {
+  border-bottom: 2px solid white;
+  width: 100%;
+}
+
+.contactheader {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.buttons {
+  display: inline-flex;
+  margin: auto;
+  padding: 1em;
+}
+
+.headerth {
+  display: inline-block;
+  align-items: space-around;
+}
