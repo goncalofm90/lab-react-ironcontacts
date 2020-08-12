@@ -87,6 +87,13 @@ class ContactList extends React.Component {
       people: newcontacts,
     });
   };
+  delete = (index) => {
+    const list = [...this.state.people];
+    list.splice(index, 1);
+    this.setState({
+      list,
+    });
+  };
   render() {
     return (
       <div>
@@ -106,7 +113,7 @@ class ContactList extends React.Component {
             <th class="headerth">Popularity</th>
           </tr>
 
-          {this.state.people.map((person) => {
+          {this.state.people.map((person, index) => {
             return (
               <tr class="contacts">
                 <td>
@@ -114,6 +121,9 @@ class ContactList extends React.Component {
                 </td>
                 <td class="listtd">{person.name} | </td>
                 <td class="listtd">{person.popularity.toFixed(2)}</td>
+                <td class="listtd">
+                  <button onClick={() => this.delete(index)}>Delete</button>
+                </td>
               </tr>
             );
           })}
